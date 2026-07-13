@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathcode-mini"
+version = "0.1.0"
+description = "A public, expired MathCode task for multi-turn coding-agent RL research"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+rl = [
+  "datasets>=3.0",
+  "torch>=2.2",
+  "transformers>=4.50",
+  "trl>=0.20",
+]
+demo = ["gradio>=5.0"]
+
+[project.scripts]
+mathcode-mini = "mathcode_mini.cli:main"
+
+[tool.setuptools]
+packages = ["mathcode", "mathcode_mini"]
+
+[tool.setuptools.package-data]
+mathcode = ["data/**/*", "data/*"]

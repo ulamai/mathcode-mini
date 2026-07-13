@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "bisect_repair_v1",
+  "group_id": "mathcode-group:certified-bisection",
+  "split": "eval_demo",
+  "source_track": "known_theorem",
+  "family": "assumption_sensitive_repair",
+  "title": "Repair a certified bisection solver",
+  "horizon": {
+    "tier": "H1",
+    "dependency_depth": 3,
+    "expert_minutes_p50": 25,
+    "verification_surfaces": 3,
+    "expected_feedback_loops": 2
+  },
+  "horizon_status": "H1-designed; human and policy calibration pending",
+  "calibration_status": "design_estimate_only",
+  "estimate_basis": "author decomposition and dependency-depth review; not a measured human percentile",
+  "allowed_actions": [
+    "repo_tree",
+    "read_file",
+    "search_repo",
+    "replace_text",
+    "write_file",
+    "run_public_tests",
+    "python_run",
+    "inspect_diff",
+    "finish"
+  ],
+  "editable_paths": ["src/", "tests/added/", "docs/"],
+  "budget": {
+    "actions": 40,
+    "test_runs": 8,
+    "submissions": 1,
+    "wall_time_seconds": 900
+  },
+  "verification_families": [
+    {"id": "api", "critical": true},
+    {"id": "certificate", "critical": true},
+    {"id": "endpoint", "critical": true},
+    {"id": "orientation", "critical": true},
+    {"id": "invalid_bracket", "critical": true},
+    {"id": "budget", "critical": true},
+    {"id": "nonfinite", "critical": true}
+  ],
+  "required_artifacts": ["working repository", "regression tests", "evidence report"],
+  "rights": {
+    "source": "Ulam-authored synthetic task derived from standard public mathematics",
+    "redistribution": "Public expired demo under the repository license"
+  }
+}
