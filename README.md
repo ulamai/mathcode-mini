@@ -105,10 +105,12 @@ context. Use a container or hosted sandbox when running untrusted policies.
 
 ## Hugging Face publication
 
-The recommended public deployment is a CPU Gradio Space built from this
+The recommended no-cost public deployment is a static Space derived from this
 repository. GitHub remains the canonical source; the Space is a discoverable
-interactive view of the same expired task. A separate sanitized Dataset
-repository can hold public trajectory summaries and failure-atlas records.
+interactive view of the same expired task without hosted Python execution. A
+separate sanitized Dataset repository can hold public trajectory summaries and
+failure-atlas records. The runnable Gradio app in this repository is available
+for local use or a separately funded Space.
 See [examples/huggingface.md](examples/huggingface.md) for the release
 procedure and the public-data boundary.
 

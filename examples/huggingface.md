@@ -2,7 +2,8 @@
 
 MathCode Mini has two useful public Hub surfaces:
 
-1. `ulamai/mathcode-mini` as a Gradio Space for the interactive demo.
+1. `ulamai/mathcode-mini` as a free static Space for the interactive demo and
+   public contract overview.
 2. `ulamai/mathcode-mini-traces` as a Dataset repository for sanitized public
    trajectory summaries and failure-atlas records.
 
@@ -11,9 +12,11 @@ Space, and keep the Dataset release versioned against the same source commit.
 
 ## Space
 
-The repository root already contains the Gradio YAML front matter and
-`requirements.txt` expected by a standard Space. The Space runs only the
-expired `bisect_repair_v1` task and its visible public grader.
+The source repository contains the runnable Gradio app and `requirements.txt`
+for local use or a separately funded Gradio Space. The organization-hosted
+Space is a static derivative so it does not require paid compute. It shows the
+expired `bisect_repair_v1` task, action contract, and a visible public baseline
+report without executing arbitrary Python.
 
 ```bash
 git clone https://github.com/ulamai/mathcode-mini.git
