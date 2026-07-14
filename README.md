@@ -5,6 +5,14 @@ colorFrom: indigo
 colorTo: blue
 sdk: gradio
 app_file: app.py
+python_version: "3.11"
+suggested_hardware: "cpu-basic"
+license: other
+tags:
+- reinforcement-learning
+- coding-agents
+- tool-use
+- code-repair
 ---
 
 # MathCode Mini
@@ -74,9 +82,11 @@ after `finish`.
 ## Public surfaces
 
 - `app.py`: a browser demo suitable for a Hugging Face Space.
+- `requirements.txt`: Space runtime dependencies.
 - `train_grpo.py`: minimal TRL multi-turn GRPO example.
 - `examples/prime.md`: Prime hosted-evaluation smoke test.
 - `examples/tinker.md`: Tinker integration direction.
+- `examples/huggingface.md`: Space and sanitized Dataset publication guide.
 - `mathcode_mini/grader.py`: public expired-task grader.
 
 `examples/reference_solution.py` is an intentionally public upper-bound
@@ -92,6 +102,15 @@ active tasks, or customer traces to this repository.
 
 The local environment executes candidate Python in the current process's OS
 context. Use a container or hosted sandbox when running untrusted policies.
+
+## Hugging Face publication
+
+The recommended public deployment is a CPU Gradio Space built from this
+repository. GitHub remains the canonical source; the Space is a discoverable
+interactive view of the same expired task. A separate sanitized Dataset
+repository can hold public trajectory summaries and failure-atlas records.
+See [examples/huggingface.md](examples/huggingface.md) for the release
+procedure and the public-data boundary.
 
 ## License
 
