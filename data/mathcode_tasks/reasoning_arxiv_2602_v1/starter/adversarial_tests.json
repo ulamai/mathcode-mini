@@ -1,0 +1,26 @@
+[
+  {
+    "mutated_claim": "The inclusion G(A,sigma)⊆Nrd^*_{C1}Nrd^*_{C2} holds for index-4 components without RN^sgn_i.",
+    "mutation_type": "dropped_hypothesis",
+    "target_pvu": "PVU-004",
+    "test_id": "ADV-001"
+  },
+  {
+    "mutated_claim": "Once Nrd^*_{C_i}⊆Hyp(A,sigma), the same inclusion into Hyp2(A,sigma) follows automatically.",
+    "mutation_type": "Hyp2_overclaim",
+    "target_pvu": "PVU-007",
+    "test_id": "ADV-002"
+  },
+  {
+    "mutated_claim": "Theorem 7.3 already proves the two-component Clifford case for deg A≡0 mod4.",
+    "mutation_type": "wrong_parity",
+    "target_pvu": "PVU-008",
+    "test_id": "ADV-003"
+  },
+  {
+    "mutated_claim": "The reverse inclusion follows from u(K)<=8 alone, regardless of u(L) for splitting fields L.",
+    "mutation_type": "u_invariant_scope_error",
+    "target_pvu": "PVU-005",
+    "test_id": "ADV-004"
+  }
+]

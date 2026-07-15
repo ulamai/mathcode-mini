@@ -1,0 +1,24 @@
+{
+  "contamination_status": "public Erdos problem plus generated candidate proof; not suitable as hidden holdout",
+  "domain": "mathematics",
+  "human_review_status": "ai_preannotated",
+  "public_boundary": {
+    "canonical_proofs_included": false,
+    "expected_statuses_included": false,
+    "raw_transcripts_included": false,
+    "reward_gates_included": false
+  },
+  "public_release_note": "Curated public sample. Raw traces, private reviewer notes, hidden-holdout labels, and partner-specific preview metadata are intentionally excluded.",
+  "record_id": "erdos_1201_rlvr_v1",
+  "source_sha256": "sha256:af944fbab3aa68f0163565d6ec56272f65f5305e1e851eb9ea885432f211eb00",
+  "source_version": "ep1201-rlvr-ulam-ai-review-filled-corrected-draft-v0.4",
+  "split": "sample_preview",
+  "subdomain": [
+    "analytic number theory",
+    "smooth numbers",
+    "multiplicative functions",
+    "density arguments",
+    "Erdos problems"
+  ],
+  "theorem_status": "partial_solution"
+}

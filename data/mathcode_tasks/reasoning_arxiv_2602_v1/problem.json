@@ -1,0 +1,56 @@
+{
+  "assumptions": [
+    "char(K)!=2",
+    "(A,sigma) has orthogonal involution of trivial discriminant",
+    "(A,sigma) belongs to I^2 in the paper sense",
+    "the source-paper external theorems are available",
+    "for unconditional claims, RN^sgn_i and RN^2-ext_i need independent proof or citation"
+  ],
+  "external_references": [
+    {
+      "label": "Archita-Becher, Similitudes over fields with I^4=0",
+      "role": "source_paper",
+      "url": "https://arxiv.org/pdf/2602.22147"
+    },
+    {
+      "label": "Proposition 4.2",
+      "role": "reduced-norm containment and index<=2 bottleneck",
+      "source": "arXiv:2602.22147 lines 374-414"
+    },
+    {
+      "label": "Proposition 5.2",
+      "role": "sign criterion and 2-extension splitting/norm equivalence under I^3(K(sqrt(-1)))=0",
+      "source": "arXiv:2602.22147 lines 631-648"
+    },
+    {
+      "label": "Theorem 5.9",
+      "role": "proof skeleton for forward inclusion through sign-to-reduced-norm step",
+      "source": "arXiv:2602.22147 lines 1137-1186"
+    },
+    {
+      "label": "Theorem 7.2",
+      "role": "baseline index<=2 theorem under I^4_K=0",
+      "source": "arXiv:2602.22147 lines 1575-1604"
+    },
+    {
+      "label": "Theorem 7.3",
+      "role": "existing index<=4 statement in degree 2 mod 4 parity",
+      "source": "arXiv:2602.22147 lines 1606-1613"
+    },
+    {
+      "label": "Theorem 7.5",
+      "role": "u(K)<=8 and I^3 theorem used after Clifford component splitting",
+      "source": "arXiv:2602.22147 lines 1702-1731"
+    },
+    {
+      "label": "Corollary 7.6",
+      "role": "baseline Hyp=Nrd product result under u(Kprime)<=8 for all finite extensions",
+      "source": "arXiv:2602.22147 lines 1742-1771"
+    }
+  ],
+  "known_public_status": "The source paper is public arXiv v1 dated 25 Feb 2026; the index-4 two-component extension formulated here is an Ulam conditional extension framework, not a theorem stated in the paper.",
+  "normalized_statement": "Given the results of Archita-Becher on similitudes over fields with I^4=0, formulate a conditional extension of the index<=2 two-Clifford-component theorem to index-4 Clifford components, isolating the exact reduced-norm inputs needed and preserving open gaps.",
+  "original_statement": "extend results from https://arxiv.org/pdf/2602.22147 to more general setting",
+  "target": "Produce a verified/conditional proof-unit decomposition showing what follows from RN^sgn_i and RN^2-ext_i, and what remains open.",
+  "title": "Conditional index-4 extension framework for arXiv:2602.22147"
+}

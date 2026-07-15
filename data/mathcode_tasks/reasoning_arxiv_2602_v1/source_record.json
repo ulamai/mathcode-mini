@@ -1,0 +1,25 @@
+{
+  "contamination_status": "public_arxiv_paper_not_hidden_holdout",
+  "domain": "mathematics",
+  "human_review_status": "reviewed_by_math_phd",
+  "public_boundary": {
+    "canonical_proofs_included": false,
+    "expected_statuses_included": false,
+    "raw_transcripts_included": false,
+    "reward_gates_included": false
+  },
+  "public_release_note": "Curated public sample. Raw traces, private reviewer notes, hidden-holdout labels, and partner-specific preview metadata are intentionally excluded.",
+  "record_id": "ulam-rlvr-arxiv-2602-22147-index4-extension-001",
+  "source_sha256": "sha256:5c3a518aefb9c027a5f597abea5244dd1f0435db3635c514d041f390556b092c",
+  "source_version": "arxiv2602-22147-rlvr-ulam-reviewed-final-v0.2",
+  "split": "sample_preview",
+  "subdomain": [
+    "algebra_with_involution",
+    "quadratic_forms",
+    "R_equivalence",
+    "reduced_norms",
+    "Clifford_algebras",
+    "u_invariant"
+  ],
+  "theorem_status": "partial_solution"
+}

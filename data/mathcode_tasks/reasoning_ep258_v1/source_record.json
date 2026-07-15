@@ -1,0 +1,25 @@
+{
+  "contamination_status": "Public Erdos problem and public 2025 theorem; not suitable as hidden holdout, but suitable as inspected RLVR/training/eval-format example.",
+  "domain": "mathematics",
+  "human_review_status": "reviewed_by_math_phd",
+  "public_boundary": {
+    "canonical_proofs_included": false,
+    "expected_statuses_included": false,
+    "raw_transcripts_included": false,
+    "reward_gates_included": false
+  },
+  "public_release_note": "Curated public sample. Raw traces, private reviewer notes, hidden-holdout labels, and partner-specific preview metadata are intentionally excluded.",
+  "record_id": "erdos_258_rlvr_ulam_ai_reviewed_by_math_phd_v0_5",
+  "source_sha256": "sha256:e16063493559e4f812f6cdcf9a66d353ba07e193b1f9ac3d35bad2a0fa9f106c",
+  "source_version": "ep258-rlvr-ulam-ai-reviewed-by-math-phd-v0.5",
+  "split": "sample_preview",
+  "subdomain": [
+    "number theory",
+    "irrationality",
+    "divisor function",
+    "Cantor series",
+    "Erdos problems",
+    "prime factors of consecutive integers"
+  ],
+  "theorem_status": "known"
+}

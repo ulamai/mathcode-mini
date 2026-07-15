@@ -1,0 +1,177 @@
+[
+  {
+    "claim": "The exceptional-set formulation is equivalent to the desired lower-density statement after taking k=H-1.",
+    "dependencies": [],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S01",
+    "machine_checkable": false,
+    "pvu_id": "PVU-001",
+    "unit_type": "reduction",
+    "verification_predicate": "Check equivalence of exceptional-set formulation and complement lower-density conclusion.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "For 0<epsilon<1, alpha=1-epsilon/2 gives rho(1/alpha)<1 and a positive delta; H can be chosen so C0 loglogH/logH<=delta.",
+    "dependencies": [
+      "PVU-001"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S02",
+    "machine_checkable": true,
+    "pvu_id": "PVU-002",
+    "unit_type": "parameter_choice",
+    "verification_predicate": "Check alpha, u, r, delta relations and H-existence logic.",
+    "verifier_level": "L2_symbolic_plus_arithmetic",
+    "verifier_type": [
+      "symbolic",
+      "arithmetic",
+      "checker_sanity"
+    ]
+  },
+  {
+    "claim": "The indicator f_X(m)=1_{P(m)<=y} is bounded and multiplicative for fixed X and y.",
+    "dependencies": [
+      "PVU-002"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S04",
+    "machine_checkable": true,
+    "pvu_id": "PVU-003",
+    "unit_type": "multiplicativity_check",
+    "verification_predicate": "Check fixed-y smoothness-indicator multiplicativity; human verifies that y is fixed on the dyadic block.",
+    "verifier_level": "L3_finite_computational",
+    "verifier_type": [
+      "finite_checker",
+      "symbolic"
+    ]
+  },
+  {
+    "claim": "The long average A_X of f_X over [X,2X] tends to r=rho(1/alpha), hence is <=r+delta for large X.",
+    "dependencies": [
+      "PVU-002",
+      "PVU-003"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S05",
+    "machine_checkable": false,
+    "pvu_id": "PVU-004",
+    "unit_type": "external_theorem_application",
+    "verification_predicate": "Check correct invocation of Dickman-de Bruijn asymptotic and dyadic normalization.",
+    "verifier_level": "L1_external_theorem",
+    "verifier_type": [
+      "external_theorem",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "MR gives local averages of f_X close to A_X outside a controlled exceptional set, and these local averages are <1.",
+    "dependencies": [
+      "PVU-002",
+      "PVU-003",
+      "PVU-004"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S06",
+    "machine_checkable": false,
+    "pvu_id": "PVU-005",
+    "unit_type": "external_theorem_application",
+    "verification_predicate": "Check correct invocation of Matomaki-Radziwill theorem and exceptional-set arithmetic.",
+    "verifier_level": "L1_external_theorem",
+    "verifier_type": [
+      "external_theorem",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Every bad start n in [X,2X] has f_X(n+j)=1 for all 0<=j<H.",
+    "dependencies": [
+      "PVU-002",
+      "PVU-003"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S07",
+    "machine_checkable": true,
+    "pvu_id": "PVU-006",
+    "unit_type": "smoothness_implication",
+    "verification_predicate": "Check finite instances of bad-start smoothness implication; human verifies inequality generally.",
+    "verifier_level": "L3_finite_computational",
+    "verifier_type": [
+      "finite_checker",
+      "symbolic"
+    ]
+  },
+  {
+    "claim": "B_H(epsilon) cap [X,2X] is contained in the MR exceptional set E_{X,H}.",
+    "dependencies": [
+      "PVU-005",
+      "PVU-006"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S08",
+    "machine_checkable": false,
+    "pvu_id": "PVU-007",
+    "unit_type": "containment",
+    "verification_predicate": "Check the contradiction local_average=1 versus local_average<1.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "After dividing by X and taking limsup_X, the dyadic bad-set density is O_epsilon((log H)^{1/3}/H^{delta/25}).",
+    "dependencies": [
+      "PVU-007"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S09",
+    "machine_checkable": false,
+    "pvu_id": "PVU-008",
+    "unit_type": "asymptotic_bound",
+    "verification_predicate": "Check X-limsup and H-asymptotic bookkeeping.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "asymptotic_bookkeeping"
+    ]
+  },
+  {
+    "claim": "Dyadic limsup control implies global upper-density control up to a factor 2.",
+    "dependencies": [
+      "PVU-008"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S10",
+    "machine_checkable": false,
+    "pvu_id": "PVU-009",
+    "unit_type": "density_conversion",
+    "verification_predicate": "Check dyadic-to-global density lemma.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "density_bookkeeping"
+    ]
+  },
+  {
+    "claim": "Choosing H gives k=H-1 and lower density at least 1-eta; the proof does not establish natural-density existence.",
+    "dependencies": [
+      "PVU-001",
+      "PVU-009"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S11",
+    "machine_checkable": false,
+    "pvu_id": "PVU-010",
+    "unit_type": "final_assembly_and_gap_label",
+    "verification_predicate": "Check final assembly and the natural-density gap label.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "gap_annotation"
+    ]
+  }
+]

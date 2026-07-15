@@ -30,6 +30,11 @@ This is a compatibility example, not an active benchmark. It contains one
 expired task and a public reference solution. Ulam's active tasks, private
 evaluators, operator tokens, and commercial scorer are not included.
 
+The repository also contains three public MathCode-formatted reasoning task
+projections under `data/mathcode_tasks`. These are sanitized inspection and
+integration bundles, not hidden holdouts or a replacement for Ulam's private
+scorer.
+
 ## Run locally
 
 Requires Python 3.11+.
@@ -87,6 +92,8 @@ after `finish`.
 - `examples/prime.md`: Prime hosted-evaluation smoke test.
 - `examples/tinker.md`: Tinker integration direction.
 - `examples/huggingface.md`: Space and sanitized Dataset publication guide.
+- `data/mathcode_tasks/`: three public reasoning task projections shared with
+  the sanitized Hugging Face Dataset.
 - `mathcode_mini/grader.py`: public expired-task grader.
 
 `examples/reference_solution.py` is an intentionally public upper-bound
@@ -113,6 +120,24 @@ failure-atlas records. The runnable Gradio app in this repository is available
 for local use or a separately funded Space.
 See [examples/huggingface.md](examples/huggingface.md) for the release
 procedure and the public-data boundary.
+
+## Reasoning task projections
+
+The public reasoning track currently contains:
+
+- `reasoning_ep258_v1` — known-status public sample;
+- `reasoning_ep1201_v1` — partial, draft-reviewed public sample;
+- `reasoning_arxiv_2602_v1` — conditional, reviewed public sample.
+
+These bundles are format-compatible public projections for inspection and
+environment integration. Canonical proofs, expected statuses, reward gates,
+reference assessments, and private evaluator code are not included. See
+[examples/reasoning.md](examples/reasoning.md) and the matching [Hugging Face
+Dataset projection](https://huggingface.co/datasets/ulamai/mathcode-mini-traces/tree/main/data/mathcode_tasks).
+
+The public `MathCodeMiniEnv` and grader remain a runnable bisection example;
+they do not score the reasoning bundles. Ulam's full MathCode release keeps
+the operator scorer and canonical replay path host-only.
 
 ## License
 

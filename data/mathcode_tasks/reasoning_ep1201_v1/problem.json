@@ -1,0 +1,34 @@
+{
+  "assumptions": [
+    "epsilon > 0 and eta > 0 are fixed before k/H is chosen",
+    "P(1) may be set to 1; only large n matter",
+    "External theorem inputs: Matomaki-Radziwill short interval theorem; Dickman-de Bruijn smooth-number asymptotic"
+  ],
+  "external_references": [
+    {
+      "role": "problem statement and public status",
+      "title": "Erdos Problem #1201",
+      "url": "https://www.erdosproblems.com/1201"
+    },
+    {
+      "role": "public comments noting Matomaki-Radziwill deduction and natural-density caveat",
+      "title": "Erdos Problem #1201 discussion thread",
+      "url": "https://www.erdosproblems.com/forum/thread/1201"
+    },
+    {
+      "role": "external theorem input for short interval averages of multiplicative functions",
+      "title": "K. Matomaki and M. Radziwill, Multiplicative functions in short intervals",
+      "url": "https://arxiv.org/abs/1501.04585"
+    },
+    {
+      "role": "standard smooth-number asymptotic reference pointer; replace with de Bruijn/Tenenbaum in final scholarly package",
+      "title": "Dickman-de Bruijn smooth-number asymptotic",
+      "url": "https://en.wikipedia.org/wiki/Dickman_function"
+    }
+  ],
+  "known_public_status": "The Erdos Problems page still marks the problem open. The discussion thread contains a comment claiming a Matomaki-Radziwill deduction and a later caveat that lower density does not establish existence of natural density. Treat as a partial/conditional-golden record unless a human expert accepts the formulation.",
+  "normalized_statement": "For every epsilon, eta > 0, find k such that the set G_k(epsilon) = {n: P(prod_{j=0}^k (n+j)) > n^{1-epsilon}} has density at least 1-eta. The RLVR proof record proves lower asymptotic density at least 1-eta via upper density control of the exceptional set.",
+  "original_statement": "Is it true that for every epsilon, eta > 0 there exists a k such that the density of n for which P(n(n+1)...(n+k)) > n^{1-epsilon} is at least 1-eta, where P(m) is the greatest prime divisor of m?",
+  "target": "Prove upper density of the exceptional set B_H(epsilon) tends to 0 as H tends to infinity, then set k=H-1.",
+  "title": "Erdos Problem #1201: largest prime divisor of products of consecutive integers"
+}

@@ -1,0 +1,71 @@
+{
+  "allowed_actions": [
+    "repo_tree",
+    "read_file",
+    "search_repo",
+    "replace_text",
+    "write_file",
+    "run_public_tests",
+    "python_run",
+    "inspect_diff",
+    "finish"
+  ],
+  "budget": {
+    "actions": 40,
+    "submissions": 1,
+    "test_runs": 8,
+    "wall_time_seconds": 900
+  },
+  "calibration_status": "not_measured",
+  "editable_paths": [
+    "draft/"
+  ],
+  "estimate_basis": "PVU count and dependency structure from a public sample record; not a measured human percentile",
+  "family": "proof_unit_repair_and_scope_audit",
+  "group_id": "mathcode-group:verified-reasoning:reasoning_arxiv_2602_v1",
+  "horizon": {
+    "dependency_depth": 4,
+    "expected_feedback_loops": 3,
+    "expert_minutes_p50": 60,
+    "tier": "H3",
+    "verification_surfaces": 4
+  },
+  "horizon_status": "source-derived; policy and human calibration pending",
+  "required_artifacts": [
+    "draft/assessment.json",
+    "draft/proof.md",
+    "draft/adversarial.json"
+  ],
+  "rights": {
+    "redistribution": "Public sample preview; commercial use requires separate written license from Ulam.ai",
+    "source": "Ulam public sample preview from verified-research-reasoning-trajectories"
+  },
+  "schema_version": "1.0.0",
+  "source_track": "verified_research_reasoning_public",
+  "split": "sample_preview",
+  "task_id": "reasoning_arxiv_2602_v1",
+  "task_kind": "reasoning",
+  "title": "Conditional index-4 theorem-scope audit",
+  "verification_families": [
+    {
+      "critical": true,
+      "id": "pvu_completion"
+    },
+    {
+      "critical": true,
+      "id": "dependency_order"
+    },
+    {
+      "critical": true,
+      "id": "theorem_scope"
+    },
+    {
+      "critical": true,
+      "id": "adversarial_robustness"
+    },
+    {
+      "critical": true,
+      "id": "integrity"
+    }
+  ]
+}

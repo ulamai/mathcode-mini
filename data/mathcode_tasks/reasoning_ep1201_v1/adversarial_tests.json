@@ -1,0 +1,50 @@
+[
+  {
+    "mutated_claim": "The proof establishes that the natural density exists and is at least 1-eta.",
+    "mutation_type": "claim_strengthening",
+    "target_pvu": "PVU-010",
+    "test_id": "EP1201_ADV_001"
+  },
+  {
+    "mutated_claim": "Matomaki-Radziwill implies the short interval average is close to A_X for every starting point n.",
+    "mutation_type": "theorem_scope_error",
+    "target_pvu": "PVU-005",
+    "test_id": "EP1201_ADV_002"
+  },
+  {
+    "mutated_claim": "The long average A_X tends to rho(alpha).",
+    "mutation_type": "wrong_parameter",
+    "target_pvu": "PVU-004",
+    "test_id": "EP1201_ADV_003"
+  },
+  {
+    "mutated_claim": "For each n one may choose H=H(n) large enough, and then set k=H(n)-1.",
+    "mutation_type": "wrong_quantifier",
+    "target_pvu": "PVU-002",
+    "test_id": "EP1201_ADV_004"
+  },
+  {
+    "mutated_claim": "The smoothness indicator remains multiplicative even if the threshold y is allowed to vary with the input m.",
+    "mutation_type": "threshold_variation_multiplicativity_error",
+    "target_pvu": "PVU-003",
+    "test_id": "EP1201_ADV_005"
+  },
+  {
+    "mutated_claim": "The MR exceptional set is contained in the bad-start set B_H(epsilon).",
+    "mutation_type": "false_converse",
+    "target_pvu": "PVU-007",
+    "test_id": "EP1201_ADV_006"
+  },
+  {
+    "mutated_claim": "Dyadic limsup at most theta automatically implies global upper density at most theta with no loss.",
+    "mutation_type": "missing_hypothesis",
+    "target_pvu": "PVU-009",
+    "test_id": "EP1201_ADV_007"
+  },
+  {
+    "mutated_claim": "If the product is y-smooth then the desired condition holds, regardless of the relation between y and n^{1-epsilon}.",
+    "mutation_type": "missing_hypothesis",
+    "target_pvu": "PVU-006",
+    "test_id": "EP1201_ADV_008"
+  }
+]

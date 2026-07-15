@@ -1,0 +1,158 @@
+[
+  {
+    "claim": "Define Q_n and justify convergence of S.",
+    "dependencies": [],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S01",
+    "machine_checkable": false,
+    "pvu_id": "PVU-001",
+    "unit_type": "setup_convergence",
+    "verification_predicate": "Verify Q_n is integer product and series convergence from eventual exponential denominator growth.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "State the Tao--Teravainen theorem with all-shift bounded Omega.",
+    "dependencies": [],
+    "external_theorem_dependency": "Tao--Teravainen 2025, Theorem 1.1, arXiv:2512.01739",
+    "gold_step_id": "S02",
+    "machine_checkable": false,
+    "pvu_id": "PVU-002",
+    "unit_type": "external_theorem_statement",
+    "verification_predicate": "Check Theorem 1.1 of Tao--Teravainen gives infinitely many N and all positive k, with Omega not merely omega.",
+    "verifier_level": "L4_external_theorem",
+    "verifier_type": [
+      "human_expert",
+      "external_theorem_scope_check"
+    ]
+  },
+  {
+    "claim": "Derive tau(N+k)<=2^{Ck} from Omega(N+k)<=Ck.",
+    "dependencies": [
+      "PVU-002"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S03",
+    "machine_checkable": true,
+    "pvu_id": "PVU-003",
+    "unit_type": "divisor_bound",
+    "verification_predicate": "Verify tau(m)<=2^Omega(m) and substitute m=N+k.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Assume S=A/B and define I_N=BQ_N times the tail.",
+    "dependencies": [
+      "PVU-001"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S04",
+    "machine_checkable": false,
+    "pvu_id": "PVU-004",
+    "unit_type": "rationality_setup",
+    "verification_predicate": "Verify I_N equals B*sum_{k>=1} tau(N+k)/(a_{N+1}...a_{N+k}).",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Prove I_N is a positive integer.",
+    "dependencies": [
+      "PVU-004"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S05",
+    "machine_checkable": false,
+    "pvu_id": "PVU-005",
+    "unit_type": "integrality",
+    "verification_predicate": "Verify BQ_NS and all partial-sum terms are integers; tail is positive.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Use a_n -> infinity to force a_m > 3*2^C*B eventually.",
+    "dependencies": [
+      "PVU-002",
+      "PVU-004"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S06",
+    "machine_checkable": false,
+    "pvu_id": "PVU-006",
+    "unit_type": "eventual_threshold",
+    "verification_predicate": "Given fixed C,B and a_m->infinity, verify eventual lower bound on all m>N_0.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Select a TT-good N beyond N_0.",
+    "dependencies": [
+      "PVU-002",
+      "PVU-006"
+    ],
+    "external_theorem_dependency": "Tao--Teravainen 2025, Theorem 1.1, arXiv:2512.01739",
+    "gold_step_id": "S07",
+    "machine_checkable": false,
+    "pvu_id": "PVU-007",
+    "unit_type": "good_shift_selection",
+    "verification_predicate": "Verify the external theorem provides infinitely many good N, hence one beyond the threshold.",
+    "verifier_level": "L4_external_theorem_plus_symbolic",
+    "verifier_type": [
+      "human_expert",
+      "external_theorem_scope_check",
+      "symbolic"
+    ]
+  },
+  {
+    "claim": "Bound the cleared tail by a geometric series less than 1.",
+    "dependencies": [
+      "PVU-003",
+      "PVU-005",
+      "PVU-007"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S08",
+    "machine_checkable": true,
+    "pvu_id": "PVU-008",
+    "unit_type": "geometric_tail_bound",
+    "verification_predicate": "Verify termwise tail bound and exact geometric-series computation.",
+    "verifier_level": "L3_arithmetic_checker",
+    "verifier_type": [
+      "symbolic",
+      "arithmetic_checker",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Conclude irrationality from positive integer less than 1.",
+    "dependencies": [
+      "PVU-005",
+      "PVU-008"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S09",
+    "machine_checkable": true,
+    "pvu_id": "PVU-009",
+    "unit_type": "final_contradiction",
+    "verification_predicate": "Verify no positive integer lies in (0,1) and the contradiction discharges rationality assumption.",
+    "verifier_level": "L2_symbolic",
+    "verifier_type": [
+      "symbolic",
+      "human_gold"
+    ]
+  }
+]

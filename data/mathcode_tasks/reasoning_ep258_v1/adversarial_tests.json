@@ -1,0 +1,32 @@
+[
+  {
+    "mutated_claim": "Since a_n -> infinity, the sequence is eventually monotone, so Erdős--Straus applies.",
+    "mutation_type": "monotonicity_insertion",
+    "target_pvu": "PVU-006",
+    "test_id": "ADV-001"
+  },
+  {
+    "mutated_claim": "It is enough that Omega(N+k)<=Ck for k=1,...,100.",
+    "mutation_type": "theorem_scope_weakening",
+    "target_pvu": "PVU-002",
+    "test_id": "ADV-002"
+  },
+  {
+    "mutated_claim": "Choose a_m>3*2^C; then I_N<1.",
+    "mutation_type": "drop_rational_denominator",
+    "target_pvu": "PVU-008",
+    "test_id": "ADV-003"
+  },
+  {
+    "mutated_claim": "Since Omega(n)<=Ck, tau(n)<=Ck.",
+    "mutation_type": "incorrect_tau_bound",
+    "target_pvu": "PVU-003",
+    "test_id": "ADV-004"
+  },
+  {
+    "mutated_claim": "The same proof proves irrationality of sum sigma_k(n)/n! for all k.",
+    "mutation_type": "adjacent_problem_overclaim",
+    "target_pvu": "PVU-009",
+    "test_id": "ADV-005"
+  }
+]

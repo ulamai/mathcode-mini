@@ -1,0 +1,182 @@
+[
+  {
+    "claim": "Correctly extract the baseline theorems/propositions from the source paper that the extension uses.",
+    "dependencies": [],
+    "external_theorem_dependency": "arXiv:2602.22147 and cited algebra-with-involution results",
+    "gold_step_id": "S01",
+    "machine_checkable": false,
+    "pvu_id": "PVU-001",
+    "unit_type": "source_extraction",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V1_source_mapping",
+    "verifier_type": [
+      "source_mapping",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Identify the missing index-4 target as the degree 0 mod 4 two-component Clifford case, not the degree 2 mod 4 parity already treated by Theorem 7.3.",
+    "dependencies": [
+      "PVU-001"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S02",
+    "machine_checkable": true,
+    "pvu_id": "PVU-002",
+    "unit_type": "scope_reduction",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V2_dependency_scope",
+    "verifier_type": [
+      "dependency_checker",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Separate the sign-to-reduced-norm and reduced-norm-to-2-extension roles of Proposition 5.2.",
+    "dependencies": [
+      "PVU-001",
+      "PVU-002"
+    ],
+    "external_theorem_dependency": "arXiv:2602.22147 and cited algebra-with-involution results",
+    "gold_step_id": "S03",
+    "machine_checkable": false,
+    "pvu_id": "PVU-003",
+    "unit_type": "bottleneck_identification",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V1_human_theorem_scope",
+    "verifier_type": [
+      "theorem_scope_review",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Under RN^sgn_i and local hyperbolicity, prove G(A,sigma)⊆Nrd^*_{C1}Nrd^*_{C2}.",
+    "dependencies": [
+      "PVU-001",
+      "PVU-003"
+    ],
+    "external_theorem_dependency": "arXiv:2602.22147 and cited algebra-with-involution results",
+    "gold_step_id": "S05",
+    "machine_checkable": false,
+    "pvu_id": "PVU-004",
+    "unit_type": "conditional_forward_inclusion",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V1_human_proof_review",
+    "verifier_type": [
+      "external_theorem_application",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Under u(L)<=8 for splitting fields of C_i, prove Nrd^*_{C1}Nrd^*_{C2}⊆Hyp(A,sigma) and hence Hyp=Nrd product.",
+    "dependencies": [
+      "PVU-001",
+      "PVU-002"
+    ],
+    "external_theorem_dependency": "arXiv:2602.22147 and cited algebra-with-involution results",
+    "gold_step_id": "S06",
+    "machine_checkable": false,
+    "pvu_id": "PVU-005",
+    "unit_type": "reverse_inclusion_to_Hyp",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V1_human_proof_review",
+    "verifier_type": [
+      "external_theorem_application",
+      "norm_transitivity",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Combine inclusions to get G=Hyp=Nrd product and R-triviality under the conditional hypotheses.",
+    "dependencies": [
+      "PVU-004",
+      "PVU-005"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S07",
+    "machine_checkable": true,
+    "pvu_id": "PVU-006",
+    "unit_type": "equality_and_R_triviality",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V2_dependency_scope",
+    "verifier_type": [
+      "dependency_checker",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "State the additional RN^2-ext_i input needed to upgrade Hyp to Hyp2 for index-4 components.",
+    "dependencies": [
+      "PVU-003",
+      "PVU-004",
+      "PVU-005",
+      "PVU-006"
+    ],
+    "external_theorem_dependency": "arXiv:2602.22147 and cited algebra-with-involution results",
+    "gold_step_id": "S08",
+    "machine_checkable": false,
+    "pvu_id": "PVU-007",
+    "unit_type": "Hyp2_upgrade",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V1_human_theorem_scope",
+    "verifier_type": [
+      "theorem_scope_review",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Correctly situate the extension relative to Theorem 7.3 and the degree parity split.",
+    "dependencies": [
+      "PVU-001",
+      "PVU-002"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S09",
+    "machine_checkable": true,
+    "pvu_id": "PVU-008",
+    "unit_type": "parity_and_boundary",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V2_dependency_scope",
+    "verifier_type": [
+      "dependency_checker",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Label the degree-4 RN^sgn and RN^2-ext criteria as open algebraic inputs, not as proven results.",
+    "dependencies": [
+      "PVU-003",
+      "PVU-007",
+      "PVU-008"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S10",
+    "machine_checkable": true,
+    "pvu_id": "PVU-009",
+    "unit_type": "gap_classification",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V2_integrity_checker",
+    "verifier_type": [
+      "dependency_checker",
+      "gap_checker",
+      "human_gold"
+    ]
+  },
+  {
+    "claim": "Package the episode as conditional proof assembly and proof-criticism data rather than as a fully machine-verifiable theorem.",
+    "dependencies": [
+      "PVU-009"
+    ],
+    "external_theorem_dependency": null,
+    "gold_step_id": "S11",
+    "machine_checkable": true,
+    "pvu_id": "PVU-010",
+    "unit_type": "RLVR_packaging",
+    "verification_predicate": "The output must state the claim with the same hypotheses, dependencies, and caveats as the canonical proof; theorem-scope and no-overclaim rules apply.",
+    "verifier_level": "V2_integrity_checker",
+    "verifier_type": [
+      "schema_validation",
+      "dependency_checker"
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "assumptions": [
+    "a_n are positive integers",
+    "a_n -> infinity",
+    "tau(n) is the number of positive divisors",
+    "External theorem: infinitely many N with Omega(N+k)<=Ck for all k>=1"
+  ],
+  "external_references": [
+    {
+      "accessed_date": "2026-05-13",
+      "role": "problem statement and current public affirmative status",
+      "title": "Erdős Problem #258",
+      "url": "https://www.erdosproblems.com/258"
+    },
+    {
+      "accessed_date": "2026-05-13",
+      "role": "discussion status and affirmative answer attribution",
+      "title": "Erdős Problem #258 discussion thread",
+      "url": "https://www.erdosproblems.com/forum/thread/258"
+    },
+    {
+      "accessed_date": "2026-05-13",
+      "role": "external theorem source, especially Theorem 1.1",
+      "title": "Tao and Teravainen, Quantitative correlations and some problems on prime factors of consecutive integers",
+      "url": "https://arxiv.org/abs/2512.01739"
+    },
+    {
+      "accessed_date": "2026-05-13",
+      "role": "line-level theorem statement and tau corollary",
+      "title": "Tao and Teravainen PDF",
+      "url": "https://arxiv.org/pdf/2512.01739"
+    }
+  ],
+  "known_public_status": "The Erdős Problems page currently states that #258 has been answered affirmatively using Tao and Teravainen [TaTe25].",
+  "normalized_statement": "For every positive integer sequence (a_n) with a_n -> infinity, define Q_n=a_1...a_n and S=sum_{n>=1} tau(n)/Q_n. Prove S is irrational.",
+  "original_statement": "Let a_1,a_2,... be a sequence of positive integers with a_n -> infinity. Is sum_n tau(n)/(a_1...a_n) irrational, where tau(n) is the number of divisors of n?",
+  "target": "Prove S is irrational by assuming S=A/B, choosing a Tao--Teravainen good N past the denominator threshold, and forcing the cleared positive integer tail I_N to satisfy 0<I_N<1.",
+  "title": "Erdős Problem #258: irrationality of divisor-function Cantor series with a_n -> infinity"
+}
